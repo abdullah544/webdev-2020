@@ -1,0 +1,8 @@
+<h2>Films</h2>
+<ul class="films">
+  <li *ngFor="let film of films">
+    <a routerLink="/detail/{{film.id}}">
+      <span class="badge">{{film.id}}</span> {{film.title}}
+    </a>
+  </li>
+</ul>
