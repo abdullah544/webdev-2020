@@ -24,12 +24,11 @@ class VacancyListAPIView(generics.ListCreateAPIView):
 class VacancyDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Vacancy.objects.all()
     serializer_class = VacancySerializer
-    # permission_classes = (IsAuthenticated)
 
-# class CompanyWithVacanciesAPIView(APIView):
-#     queryset = Vacancy.objects.all()
-#     serializer_class = CompanyWithVacanciesSerializer
+
 ###############################################################################
+
+
 class CompanyVacanciesAPIView(APIView):
     def get(self, request, company_id):
         vacancies = Vacancy.objects.filter(company_id=company_id)

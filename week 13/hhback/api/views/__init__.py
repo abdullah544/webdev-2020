@@ -1,1 +1,1 @@
-from .views_fbv import category_list, category_detail
+from .views_fbv import company_list, company_detail
